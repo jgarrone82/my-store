@@ -10,4 +10,5 @@ export class AppComponent {
   name = 'Jorge';
   age= 40;
   img:string = 'http://placeimg.com/640/480/tech';
+  btnDisabled = true;
 }
