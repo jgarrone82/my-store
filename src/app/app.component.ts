@@ -11,4 +11,22 @@ export class AppComponent {
   age= 40;
   img:string = 'http://placeimg.com/640/480/tech';
   btnDisabled = true;
+
+  toggleButton(){
+    this.btnDisabled = !this.btnDisabled;
+  }
+
+  increaseAge(){
+    this.age += 1;
+  }
+
+  onScroll(event: Event) {
+    const element = event.target as HTMLElement;
+    console.log(element.scrollTop);
+  }
+
+  changeName(event: Event) {
+    const element = event.target as HTMLInputElement;
+    this.name = element.value;
+  }
 }
