@@ -7,6 +7,14 @@
   <title>Document</title>
 </head>
 <body>
+  <h1>NgModel</h1>
+  <p>Nombre: {{name}}</p>
+  <p>Edad: {{age}} </p>
+  <input type="text" required #nameInput="ngModel" [(ngModel)]="name">
+  <p>Valid: {{nameInput.valid}}</p>
+  <input type="number" max="100" min="18" required #ageInput="ngModel" [(ngModel)]="age">
+  <p>Valid: {{ageInput.valid}}</p>
+  <hr/>
   <h1>Eventos</h1>
   <button [disabled]="btnDisabled">Enviar</button>
   <button (click)="toggleButton()">Toggle button</button>
