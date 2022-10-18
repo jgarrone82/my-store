@@ -7,6 +7,10 @@
   <title>Document</title>
 </head>
 <body>
+  <h1>*ngIf</h1>
+  <input type="text" required [(ngModel)]="name">
+  <p *ngIf="name == 'Jorge'">My content</p>
+  <hr/>
   <h1>NgModel</h1>
   <p>Nombre: {{name}}</p>
   <p>Edad: {{age}} </p>
