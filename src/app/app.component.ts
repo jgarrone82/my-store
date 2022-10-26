@@ -12,6 +12,10 @@ export class AppComponent {
   img:string = 'http://placeimg.com/640/480/tech';
   btnDisabled = true;
 
+  names: string[] = ['Jorge', 'Noelia', 'Valentino', 'Giovanni','Stefano'];
+
+  newName = '';
+
   toggleButton(){
     this.btnDisabled = !this.btnDisabled;
   }
@@ -28,5 +32,14 @@ export class AppComponent {
   changeName(event: Event) {
     const element = event.target as HTMLInputElement;
     this.name = element.value;
+  }
+
+  addName(){
+    this.names.push(this.newName);
+    this.newName = '';
+  }
+
+  deleteName(index: number){
+    this.names.splice(index, 1);
   }
 }
