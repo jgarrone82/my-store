@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,42 @@ export class AppComponent {
   img:string = 'http://placeimg.com/640/480/tech';
   btnDisabled = true;
 
-  names: string[] = ['Jorge', 'Noelia', 'Valentino', 'Giovanni', 'Stefano', 'Fiorella'];
+  names: string[] = ['Jorge', 'Noelia', 'Valentino', 'Giovanni','Stefano'];
+
   newName = '';
+
+  products: Product[] = [
+    {
+      name: 'Console Retro 80\'s',
+      price: 200,
+      image: './assets/images/ConsoleRetro.jpg'
+    },
+    {
+      name: 'Gaming Laptop',
+      price: 990,
+      image: './assets/images/Laptop.jpg'
+    },
+    {
+      name: 'Mini Game boy Retro',
+      price: 100,
+      image: './assets/images/RetroConsole.jpg'
+    },
+    {
+      name: 'New Smart Phone with 4 Cameras',
+      price: 750,
+      image: './assets/images/SmartPhone.jpg'
+    },
+    {
+      name: 'Smart Tv 4k UHD',
+      price: 550,
+      image: './assets/images/SmartTv.jpg'
+    },
+    {
+      name: 'Smart Watch with Wear Os 3.5',
+      price: 300,
+      image: './assets/images/SmartWatch.jpg'
+    }
+  ];
 
   toggleButton(){
     this.btnDisabled = !this.btnDisabled;
