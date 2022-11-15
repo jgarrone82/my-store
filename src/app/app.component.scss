@@ -4,3 +4,19 @@
   overflow: auto;
   background: red;
 }
+
+@media screen and (min-width: 488px){
+  .products-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+  }
+}
+
+@media screen and (min-width: 730px){
+  .products-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+  }
+}

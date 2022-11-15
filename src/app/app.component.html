@@ -7,8 +7,36 @@
   <title>Document</title>
 </head>
 <body>
+  <h1>ngSwitch</h1>
+
+  <input type="text" required [(ngModel)]="name">
+
+  <div [ngSwitch]="name">
+    <p *ngSwitchCase="'Jorge'">
+      The user is Jorge
+    </p>
+    <p *ngSwitchCase="'Noelia'">
+      The user is Noelia
+    </p>
+    <p *ngSwitchCase="'Valentino'">
+      The user is Valentino
+    </p>
+    <p *ngSwitchDefault> There is no match</p>
+  </div>
+
+  <!-- <p *ngIf="name === 'Jorge'">
+    The user is Jorge
+  </p>
+  <p *ngIf="name === 'Noelia'">
+    The user is Noelia
+  </p>
+  <p *ngIf="name === 'Valentino'">
+    The user is Valentino
+  </p> -->
+
+  <hr/>
   <h1>*ngFor Objects</h1>
-  <div>
+  <div class="products-grid">
     <div *ngFor="let product of products">
       <img width="250" [src]="product.image" alt="image">
       <h2> $ {{product.price}}</h2>
