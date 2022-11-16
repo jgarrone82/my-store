@@ -5,18 +5,47 @@
   background: red;
 }
 
-@media screen and (min-width: 488px){
-  .products-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
+.message-error {
+  width: fit-content;
+  display: block;
+  background-color: crimson;
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: white;
+
+  opacity: 0;
+  transition: all linear .5s;
+  &.invalid {
+    opacity: 1;
   }
 }
 
-@media screen and (min-width: 730px){
-  .products-grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
+.products-grid {
+  display: flex;
+  flex-direction: column;
+  div {
+      img {
+          width: 100%;
+          border-radius: 10px;
+      }
+      h2 {
+          margin: 0;
+      }
+  }
+}
+
+// Tablets
+@media screen and (min-width: 768px) {
+  .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 15px;
+  }
+}
+
+// Desktop
+@media screen and (min-width: 1024px) {
+  .products-grid {
+      grid-template-columns: repeat(5, 1fr);
   }
 }
