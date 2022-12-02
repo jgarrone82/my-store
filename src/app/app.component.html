@@ -7,6 +7,26 @@
   <title>Document</title>
 </head>
 <body>
+  <h1>Forms</h1>
+  <form (ngSubmit)="onRegister()" #registerForm="ngForm" >
+    <div class="register-form">
+      <label for="name">Name: </label>
+      <input type="text" name="name" required id="name" [(ngModel)]="user.name">
+      <p>Error message</p>
+    </div>
+    <div class="register-form">
+      <label for="email">Email: </label>
+      <input type="email" name="email" required id="email" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" [(ngModel)]="user.email">
+      <p>Error message</p>
+    </div>
+    <div class="register-form">
+      <label for="password">Password: </label>
+      <input type="password" name="password" required id="password" [(ngModel)]="user.password">
+      <p>Error message</p>
+    </div>
+    <button [disabled]="registerForm.invalid" type="submit">Register</button>
+  </form>
+  <hr/>
   <h1>ngClass & ngStyle</h1>
   <input type="text" required #nameInputngClass="ngModel" [(ngModel)]="name">
   <hr class="line-error"

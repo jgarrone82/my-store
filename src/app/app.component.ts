@@ -13,6 +13,12 @@ export class AppComponent {
   img:string = 'http://placeimg.com/640/480/tech';
   btnDisabled = true;
 
+  user = {
+    name: '',
+    email: '',
+    password: ''
+  }
+
   names: string[] = ['Jorge', 'Noelia', 'Valentino', 'Giovanni','Stefano'];
 
   newName = '';
@@ -81,5 +87,9 @@ export class AppComponent {
 
   deleteName(index: number){
     this.names.splice(index, 1);
+  }
+
+  onRegister() {
+    console.log(this.user);
   }
 }
